@@ -33,9 +33,16 @@ export default {
           to: { height: "0" },
         },
       },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+      },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: "#1c1c22",
+        accent: {
+          DEFAULT: "#00ff99",
+          hover: "#00e187",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
