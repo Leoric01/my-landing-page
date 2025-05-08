@@ -1,9 +1,42 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
+import { useEffect, useState } from "react";
 import Social from "@/components/Social";
 import Photo from "@/components/Photo";
+import Stats from "@/components/Stats";
 
 export default function Home() {
+  const [experience, setExperience] = useState({ years: 0, months: 0, days: 0 });
+  useEffect(() => {
+    const startDate = new Date("2023-04-01");
+
+    const updateExperience = () => {
+      const now = new Date();
+      let years = now.getFullYear() - startDate.getFullYear();
+      let months = now.getMonth() - startDate.getMonth();
+      let days = now.getDate() - startDate.getDate();
+
+      if (days < 0) {
+        months--;
+        const prevMonth = new Date(now.getFullYear(), now.getMonth(), 0);
+        days += prevMonth.getDate();
+      }
+
+      if (months < 0) {
+        years--;
+        months += 12;
+      }
+
+      setExperience({ years, months, days });
+    };
+
+    updateExperience();
+    const interval = setInterval(updateExperience, 1000 * 60 * 60); // update hourly
+
+    return () => clearInterval(interval);
+  }, []);
   return (
     <div className="container mx-auto">
       <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
@@ -14,7 +47,15 @@ export default function Home() {
           </h1>
           <p className="max-w-[500px] mb-9 text-white/80">
             I excel at backend using java as my main, but i have also some basics in frontend with react, typescript,
-            even created one project using angular. Other main techstack: git, sql, maven, springboot.
+            even created one project using angular, but design is my weakpoint. <br />
+            Other techstack experience: springboot, maven, gradle, git, sql, jira, confluence, swagger, hibernate,
+            junit, ELK, jenkins.
+          </p>
+          <p className="mb-4 text-white/80">
+            Current experience as an active programmer:{" "}
+            <span className="font-semibold">
+              {experience.years}y / {experience.months}m / {experience.days}d
+            </span>
           </p>
           <div className="flex flex-col xl:flex-row items-center gap-8">
             <Button variant="outline" size="lg" className="uppercase flex items-center gap-2">
@@ -33,7 +74,7 @@ export default function Home() {
           <Photo />
         </div>
       </div>
-      <main>home page</main>
+      <Stats />
     </div>
   );
 }
