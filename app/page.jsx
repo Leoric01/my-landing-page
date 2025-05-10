@@ -47,7 +47,7 @@ export default function Home() {
           </h1>
           <p className="max-w-[500px] mb-9 text-white/80">
             I excel at backend using java as my main, but i have also some basics in frontend with react, typescript,
-            even created one project using angular, but design is my weakpoint. <br />
+            even created one project using angular but design is my weakpoint. <br />
             Other techstack experience: springboot, maven, gradle, git, sql, jira, confluence, swagger, hibernate,
             junit, ELK, jenkins.
           </p>
