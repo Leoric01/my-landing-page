@@ -39,12 +39,18 @@ const Services = () => {
             opacity: 1,
             transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
           }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-[60px]"
         >
           {services.map((service, index) => {
             return (
-              <div key={index} className="flex-1 flex gap-4 items-center justify-center xl:justify-start">
-                <div>
-                  <div className="text-accent text-2xl font-bold">{service.num}</div>
+              <div
+                key={index}
+                className="flex-1 flex flex-col gap-6 justify-center group cursor-pointer transition-all duration-200 hover:bg-white/5 p-4 rounded-lg"
+              >
+                <div className="w-full flex items-center justify-between">
+                  <div className="text-3xl font-extrabold text-outline text-transparent group-hover:text-outline-hover transition-all duration-500">
+                    {service.num}
+                  </div>
                   <Link href={service.href} className="text-accent flex items-center gap-2 mt-2">
                     {service.icon} View more
                   </Link>
