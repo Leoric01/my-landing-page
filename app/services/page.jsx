@@ -9,21 +9,27 @@ const services = [
     title: "Backend development",
     description: "Java, Springboot, Maven, Gradle, SQL",
     href: "",
-    icon: <BsArrowDownRight />,
+    icon: (
+      <BsArrowDownRight className="text-primary text-3xl transition-transform duration-500 group-hover:-rotate-45" />
+    ),
   },
   {
     num: "02",
     title: "Frontend development",
     description: "React, Typescript, Angular",
     href: "",
-    icon: <BsArrowDownRight />,
+    icon: (
+      <BsArrowDownRight className="text-primary text-3xl transition-transform duration-500 group-hover:-rotate-45" />
+    ),
   },
   {
     num: "03",
     title: "DevOps",
     description: "Git, Jenkins, ELK, Docker",
     href: "",
-    icon: <BsArrowDownRight />,
+    icon: (
+      <BsArrowDownRight className="text-primary text-3xl transition-transform duration-500 group-hover:-rotate-45" />
+    ),
   },
 ];
 
@@ -51,11 +57,16 @@ const Services = () => {
                   <div className="text-3xl font-extrabold text-outline text-transparent group-hover:text-outline-hover transition-all duration-500">
                     {service.num}
                   </div>
-                  <Link href={service.href} className="text-accent flex items-center gap-2 mt-2">
-                    {service.icon} View more
+                  <Link
+                    href={service.href}
+                    className="w-[70px] h-[70px] rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex items-center justify-center"
+                  >
+                    {service.icon}
                   </Link>
                 </div>
-                <h3 className="text-xl font-semibold">{service.title}</h3>
+                <h2 className="text-[34px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500">
+                  {service.title}
+                </h2>
                 <p className="text-white/80">{service.description}</p>
                 <div className="border-b border-white/20 w-full"></div>
               </div>
