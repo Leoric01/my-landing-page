@@ -14,7 +14,7 @@ const projects = [
     num: "01",
     category: "backend",
     title: "Project 1",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo at quae quaerat quo, accusantium qui!",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, quibusdam!",
     stack: [{ name: "Java" }, { name: "Spring Boot" }],
     image: "/assets/work/thumb1.png",
     live: "",
@@ -22,30 +22,38 @@ const projects = [
   },
   {
     num: "02",
-    category: "backend",
-    title: "Project 1",
+    category: "frontend",
+    title: "Project 2",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo at quae quaerat quo, accusantium qui!",
-    stack: [{ name: "Java" }, { name: "Spring Boot" }],
+    stack: [{ name: "JavaScript" }, { name: "NextJs" }, { name: "React" }],
     image: "/assets/work/thumb2.png",
     live: "",
     github: "https://github.com/",
   },
   {
     num: "03",
-    category: "backend",
-    title: "Project 1",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo at quae quaerat quo, accusantium qui!",
-    stack: [{ name: "Java" }, { name: "Spring Boot" }],
+    category: "devops",
+    title: "Project 3",
+    description:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione laudantium esse harum autem temporibus labore libero vel expedita. Mollitia assumenda blanditiis delectus maiores iusto eveniet ad illum nobis laborum enim!",
+    stack: [{ name: "Java" }, { name: "Spring Boot" }, { name: "Docker" }, { name: "Kubernetes" }],
     image: "/assets/work/thumb3.png",
     live: "",
     github: "https://github.com/",
   },
   {
     num: "04",
-    category: "backend",
-    title: "Project 1",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo at quae quaerat quo, accusantium qui!",
-    stack: [{ name: "Java" }, { name: "Spring Boot" }],
+    category: "portfolio page",
+    title: "Project 4",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat architecto aperiam repellat nihil ipsa dicta doloribus molestias. Officiis illo rerum odit reprehenderit laboriosam facere quas tenetur sit ea, aliquid numquam ipsam velit accusamus, vero sapiente quia, error quaerat modi eveniet ad placeat harum iste nulla hic! Harum numquam iure corporis.",
+    stack: [
+      { name: "JavaScript" },
+      { name: "React" },
+      { name: "Next.js" },
+      { name: "Tailwind CSS" },
+      { name: "Framer Motion" },
+    ],
     image: "/assets/work/thumb1.png",
     live: "",
     github: "https://github.com/",
@@ -54,6 +62,10 @@ const projects = [
 
 const Work = () => {
   const [project, setProject] = useState(projects[0]);
+  const handleSlideChange = (swiper) => {
+    const currentIndex = swiper.activeIndex;
+    setProject(projects[currentIndex]);
+  };
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -63,9 +75,78 @@ const Work = () => {
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row xl:gap-[30px]">
           <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
-            text
+            <div className="flex flex-col gap-[30px] h-[50%]">
+              {/* outline num */}
+              <div className="text-8xl leading-none font-extrabold text-transparent text-outline">{project.num}</div>
+              {/* project category */}
+              <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
+                {project.category} project
+              </h2>
+              {/* project description */}
+              <p className="text-white/60">{project.description}</p>
+              {/* stack */}
+              <ul className="flex gap-4">
+                {project.stack.map((item, index) => {
+                  return (
+                    <li key={index} className="text-xl text-accent">
+                      {item.name}
+                      {/* its to have commas between techs but not on last element */}
+                      {index !== project.stack.length - 1 && <span className="text-white/60">,</span>}
+                    </li>
+                  );
+                })}
+              </ul>
+              {/* border */}
+              <div className="border border-white/20"></div>
+              {/* buttons for links */}
+              <div className="flex items-center gap-4">
+                {/* live project url */}
+                <Link href={project.live}>
+                  <TooltipProvider delayDuration={100}>
+                    <Tooltip>
+                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
+                        <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p>Live project</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                </Link>
+                {/* github project repo */}
+                <Link href={project.github}>
+                  <TooltipProvider delayDuration={100}>
+                    <Tooltip>
+                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
+                        <BsGithub className="text-white text-3xl group-hover:text-accent" />
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p>Github repository</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                </Link>
+              </div>
+            </div>
           </div>
-          <div className="w-full xl:w-[50%]">slider</div>
+          <div className="w-full xl:w-[50%]">
+            <Swiper spaceBetween={30} slidesPerView={1} className="xl:h-[520px]" onSlideChange={handleSlideChange}>
+              {projects.map((project, index) => {
+                return (
+                  <SwiperSlide key={index} className="w-full">
+                    <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
+                      {/* overlay */}
+                      <div className=""></div>
+                      {/* image */}
+                      <div className="relative w-full h-full">
+                        <Image src={project.image} fill className="object-cover" alt="" />
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                );
+              })}
+            </Swiper>
+          </div>
         </div>
       </div>
     </motion.section>
