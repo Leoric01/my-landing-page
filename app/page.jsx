@@ -33,10 +33,11 @@ export default function Home() {
     };
 
     updateExperience();
-    const interval = setInterval(updateExperience, 1000 * 60 * 60); // update hourly
+    const interval = setInterval(updateExperience, 1000 * 60 * 60 * 24);
 
     return () => clearInterval(interval);
   }, []);
+
   return (
     <div className="container mx-auto">
       <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
