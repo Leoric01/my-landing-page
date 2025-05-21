@@ -16,6 +16,7 @@ import {
 
 import { FaPhone, FaEnvelope, FaMapMarkedAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
+import emailjs from "emailjs-com";
 
 const info = [
   {
@@ -31,10 +32,23 @@ const info = [
   {
     icon: <FaMapMarkedAlt />,
     title: "Address",
-    description: "123 Main St, City, Country",
+    description: "Nusle, Prague, Czech Republic",
   },
 ];
+const sendEmail = (e) => {
+  e.preventDefault();
 
+  emailjs.sendForm("your_service_id", "your_template_id", e.target, "your_user_id").then(
+    (result) => {
+      console.log(result.text);
+      alert("Message sent successfully!");
+    },
+    (error) => {
+      console.log(error.text);
+      alert("Something went wrong.");
+    }
+  );
+};
 const Contact = () => {
   return (
     <motion.section
@@ -49,29 +63,37 @@ const Contact = () => {
         <div className="flex flex-col xl:flex-row gap-[30px]">
           {/*form */}
           <div className="xl:w-[54%] order-2 xl:order-none">
-            <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl" action="">
+            <form
+              className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl"
+              action="mailto:urbjir01@gmail.com"
+              method="POST"
+              encType="text/plain"
+            >
               <h3 className="text-4xl text-accent">Let's work together</h3>
               <p className="text-white/60">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur neque, dolorum cum quaerat provident
-                accusamus.
+                Whether you're looking for a long-term backend developer, help with a one-time project, or just have a
+                question — feel free to reach out. I’ll get back to you as soon as possible.
               </p>
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Input type="firstname" placeholder="Firstname" />
                 <Input type="lastname" placeholder="Lastname" />
                 <Input type="email" placeholder="Email address" />
-                <Input type="phone" placeholder="Phoone number" />
+                <Input type="phone" placeholder="Phone number" />
               </div>
               {/* select */}
               <Select>
                 <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Select a service" />
+                  <SelectValue placeholder="Select collaboration type" />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectGroup>
-                    <SelectLabel>Services</SelectLabel>
-                    <SelectItem value="service1">Service 1</SelectItem>
-                    <SelectItem value="service2">Service 2</SelectItem>
-                    <SelectItem value="service3">Service 3</SelectItem>
+                    <SelectLabel>Collaboration Type</SelectLabel>
+                    <SelectItem value="full-time">Full-time cooperation</SelectItem>
+                    <SelectItem value="part-time">Part-time / long-term</SelectItem>
+                    <SelectItem value="one-time">One-time project / task</SelectItem>
+                    <SelectItem value="question">Just a question / inquiry</SelectItem>
+                    <SelectItem value="other">Other</SelectItem>
                   </SelectGroup>
                 </SelectContent>
               </Select>
@@ -91,7 +113,31 @@ const Contact = () => {
                     </div>
                     <div className="flex-1">
                       <p className="text-white/60">{item.title}</p>
-                      <h3 className="text-xl">{item.description}</h3>
+                      {item.title === "Email" ? (
+                        (() => {
+                          const user = "urbjir01";
+                          const domain = "gmail.com";
+                          const email = `${user}@${domain}`;
+                          return (
+                            <a href={`mailto:${email}`} className="text-xl text-accent hover:underline">
+                              {email}
+                            </a>
+                          );
+                        })()
+                      ) : item.title === "Phone" ? (
+                        (() => {
+                          const phoneParts = ["+420", "728", "504", "470"];
+                          const fullPhone = phoneParts.join(" ");
+                          const telHref = phoneParts.join("");
+                          return (
+                            <a href={`tel:${telHref}`} className="text-xl text-accent hover:underline">
+                              {fullPhone}
+                            </a>
+                          );
+                        })()
+                      ) : (
+                        <h3 className="text-xl">{item.description}</h3>
+                      )}{" "}
                     </div>
                   </li>
                 );

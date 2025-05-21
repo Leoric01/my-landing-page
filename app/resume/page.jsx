@@ -13,38 +13,80 @@ const calculateExperienceYears = () => {
   return `${years}+ years`;
 };
 const experienceDuration = calculateExperienceYears();
-const about = {
-  title: "About Me",
+
+const experience = {
+  icon: "assets/resume/badge.svg",
+  title: "Experience",
   description:
-    "Motivated Java developer with hands-on backend and DevOps experience, strong work ethic, and a drive for continuous learning.",
-  info: [
+    "An overview of my professional experience, including my transition into IT development, with a background in entrepreneurship.",
+  items: [
     {
-      fieldName: "Name",
-      fieldValue: "Jiří Urban",
+      company: "TRASK Solutions a.s.",
+      position: "Java Developer",
+      duration: "Mar 2025 – Present",
     },
     {
-      fieldName: "Phone",
-      fieldValue: "phone", // marker
+      company: "Komerční banka",
+      position: "Junior Java Developer",
+      duration: "Apr 2023 – Dec 2024",
     },
     {
-      fieldName: "Email",
-      fieldValue: "email", // marker
+      company: "Green Fox Academy",
+      position: "Junior DevOps Engineer (Bootcamp Project Role)",
+      duration: "Apr 2023 – Aug 2023",
     },
     {
-      fieldName: "Experience",
-      fieldValue: experienceDuration,
+      company: "JASS A.S.",
+      position: "CNC Technologist (Laser Cutting)",
+      duration: "Jan 2022 – Apr 2022",
     },
     {
-      fieldName: "Nationality",
-      fieldValue: "Czech Republic",
+      company: "AD FIN A.S.",
+      position: "Tax Assistant",
+      duration: "Jan 2015 – Jan 2017",
     },
     {
-      fieldName: "Freelance",
-      fieldValue: "Available",
+      company: "Daily Menu s.r.o.",
+      position: "Owner / Managing Director (Gastro)",
+      duration: "Jan 2013 – Jan 2022",
+    },
+  ],
+};
+const education = {
+  icon: "/assets/resume/cap.svg",
+  title: "Education",
+  description:
+    "Overview of my educational background, including formal studies and intensive in-person and online programming courses.",
+  items: [
+    {
+      institution: "Codecademy",
+      degree: "Spring Boot Basics",
+      duration: "2024",
     },
     {
-      fieldName: "Languages",
-      fieldValue: "Czech C2 (native), English C1, Russian A2, Slovak",
+      institution: "Online Course Platform",
+      degree: "Full Stack Web Development Bootcamp",
+      duration: "2023",
+    },
+    {
+      institution: "Codecademy",
+      degree: "Front-end Track",
+      duration: "2023",
+    },
+    {
+      institution: "Green Fox Academy",
+      degree: "Java Backend Developer, Intensive (on-site) Bootcamp",
+      duration: "Apr 1 - Aug 31, 2023",
+    },
+    {
+      institution: "University of Pardubice, Faculty of Information Technology",
+      degree: "Bachelor's Program (Incomplete)",
+      duration: "2013 - 2015",
+    },
+    {
+      institution: "Christian Doppler Mathematical-Physical Grammar School",
+      degree: "High School Diploma (Graduated with Matura)",
+      duration: "Graduated 2012",
     },
   ],
 };
@@ -100,80 +142,38 @@ const skills = {
     { name: "Node.js", icon: <FaNodeJs /> },
   ],
 };
-const experience = {
-  icon: "assets/resume/badge.svg",
-  title: "Experience",
+const about = {
+  title: "About Me",
   description:
-    "An overview of my professional experience, including my transition into IT development and DevOps, with a background in entrepreneurship.",
-  items: [
+    "Motivated Java developer with hands-on backend and DevOps experience, strong work ethic, and a drive for continuous learning and improvement. I thrive in collaborative environments and am eager to contribute to innovative projects.",
+  info: [
     {
-      company: "TRASK Solutions a.s.",
-      position: "Java Developer",
-      duration: "Mar 2025 – Present",
+      fieldName: "Name",
+      fieldValue: "Jiří Urban",
     },
     {
-      company: "Komerční banka",
-      position: "Junior Java Developer",
-      duration: "Apr 2023 – Dec 2024",
+      fieldName: "Phone",
+      fieldValue: "phone", // marker
     },
     {
-      company: "Green Fox Academy",
-      position: "Junior DevOps Engineer (Bootcamp Project Role)",
-      duration: "Apr 2023 – Aug 2023",
+      fieldName: "Email",
+      fieldValue: "email", // marker
     },
     {
-      company: "JASS A.S.",
-      position: "CNC Technologist (Laser Cutting)",
-      duration: "Jan 2022 – Apr 2022",
+      fieldName: "Experience",
+      fieldValue: experienceDuration,
     },
     {
-      company: "AD FIN A.S.",
-      position: "Tax Assistant",
-      duration: "Jan 2015 – Jan 2017",
+      fieldName: "Nationality",
+      fieldValue: "Czech Republic",
     },
     {
-      company: "Daily Menu s.r.o.",
-      position: "Owner / Managing Director (Gastro)",
-      duration: "Jan 2013 – Jan 2022",
-    },
-  ],
-};
-
-const education = {
-  icon: "/assets/resume/cap.svg",
-  title: "Education",
-  description:
-    "Overview of my educational background, including formal studies and intensive in-person and online programming courses.",
-  items: [
-    {
-      institution: "Codecademy",
-      degree: "Spring Boot Basics",
-      duration: "2024",
+      fieldName: "Freelance",
+      fieldValue: "Available",
     },
     {
-      institution: "Online Course Platform",
-      degree: "Full Stack Web Development Bootcamp",
-      duration: "2023",
-    },
-    {
-      institution: "Codecademy",
-      degree: "Front-end Track",
-      duration: "2023",
-    },
-    {
-      institution: "Green Fox Academy",
-      degree: "Java Backend Developer, Intensive (on-site) Bootcamp",
-      duration: "Apr 1 - Aug 31, 2023",
-    },
-    {
-      institution: "University of Pardubice, Faculty of Information Technology",
-      degree: "Bachelor's Program (Incomplete)",
-      duration: "2013 - 2015",
-    },
-    {
-      institution: "Christian Doppler Mathematical-Physical Grammar School",
-      degree: "High School Diploma (Graduated with Matura)",
-      duration: "Graduated 2012",
+      fieldName: "Languages",
+      fieldValue: "Czech C2 (native), English C1, Russian A2, Slovak",
     },
   ],
 };
