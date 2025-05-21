@@ -21,15 +21,7 @@ const projects = [
     live: "https://vercelli.com",
     github: "https://github.com/Leoric01/my-landing-page",
   },
-  {
-    category: "frontend",
-    title: "Project 2",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo at quae quaerat quo, accusantium qui!",
-    stack: [{ name: "JavaScript" }, { name: "NextJs" }, { name: "React" }],
-    image: "/assets/work/thumb2.png",
-    live: "",
-    github: "https://github.com/",
-  },
+
   {
     category: "devops",
     title: "Project 3",
@@ -55,6 +47,22 @@ const projects = [
     image: "/assets/work/thumb1.png",
     live: "",
     github: "https://github.com/",
+  },
+  {
+    category: "Backend / Fullstack",
+    title: "Bank Interview REST Service",
+    description:
+      "A REST API implemented in Java and Spring Boot for a bank interview task. The service includes three functionalities: text transformation that reverses input text with vowel capitalization and whitespace normalization; numeric processing involving digit shifting, multiplication, deletion, and division based on specified rules; and a simple ticketing system with endpoints to generate, retrieve, and delete tickets. A quick frontend prototype was built using Thymeleaf.",
+    stack: [
+      { name: "Java" },
+      { name: "Spring Boot" },
+      { name: "Thymeleaf" },
+      { name: "REST API" },
+      { name: "H2 Database" },
+    ],
+    image: "/assets/work/moneta.png",
+    live: "https://successive-veronica-urb92-5cb11d87.koyeb.app/ui",
+    github: "https://github.com/Leoric01/moneta-entry-exam",
   },
   {
     category: "game",
