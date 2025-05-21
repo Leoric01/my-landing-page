@@ -12,17 +12,16 @@ import WorkSliderBtns from "@/components/WorkSliderBtns";
 
 const projects = [
   {
-    num: "01",
-    category: "backend",
-    title: "Project 1",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, quibusdam!",
-    stack: [{ name: "Java" }, { name: "Spring Boot" }],
+    category: "Frontend",
+    title: "Personal Portfolio",
+    description:
+      "This is the site you're currently viewing — a fully responsive personal portfolio built using modern frontend technologies. It includes animations, sliders, and dynamic content such as skills, experience, and project previews.",
+    stack: [{ name: "React" }, { name: "Next.js" }, { name: "Tailwind CSS" }, { name: "Framer Motion" }],
     image: "/assets/work/thumb-1.png",
-    live: "vercelli.com",
+    live: "https://vercelli.com",
     github: "https://github.com/Leoric01/my-landing-page",
   },
   {
-    num: "02",
     category: "frontend",
     title: "Project 2",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo at quae quaerat quo, accusantium qui!",
@@ -32,7 +31,6 @@ const projects = [
     github: "https://github.com/",
   },
   {
-    num: "03",
     category: "devops",
     title: "Project 3",
     description:
@@ -43,7 +41,6 @@ const projects = [
     github: "https://github.com/",
   },
   {
-    num: "04",
     category: "portfolio page",
     title: "Project 4",
     description:
@@ -59,13 +56,34 @@ const projects = [
     live: "",
     github: "https://github.com/",
   },
+  {
+    category: "game",
+    title: "Snake Game",
+    description:
+      "A simple version of the classic Snake game implemented in Java using Swing (JPanel). The game runs as a desktop application and was created to explore basic graphics, game loop timing, and collision logic in Java.",
+    stack: [{ name: "Java" }, { name: "Swing / JPanel" }],
+    image: "/assets/work/snake-g.png",
+    live: "",
+    github: "https://github.com/Leoric01/SnakeGame",
+  },
+  {
+    category: "terminal app",
+    title: "TTCExercise",
+    description:
+      "A small command-line application written as part of a coding challenge for job interview. The app reads a sequence of numbers either from a file or from standard input. Based on the count of numbers (even or odd), it filters and prints only even or odd numbers respectively. Input/output behavior is configurable via command-line arguments.",
+    stack: [{ name: "Java" }, { name: "File I/O" }],
+    image: "/assets/work/consoleapp.jpg",
+    live: "",
+    github: "https://github.com/Leoric01/TTCExercise",
+  },
 ];
 
 const Work = () => {
+  const [current, setCurrent] = useState({ project: projects[0], index: 0 });
   const [project, setProject] = useState(projects[0]);
   const handleSlideChange = (swiper) => {
     const currentIndex = swiper.realIndex;
-    setProject(projects[currentIndex]);
+    setCurrent({ project: projects[currentIndex], index: currentIndex });
   };
 
   return (
@@ -82,32 +100,33 @@ const Work = () => {
           <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
             <div className="flex flex-col gap-[30px] h-[50%]">
               {/* outline num */}
-              <div className="text-8xl leading-none font-extrabold text-transparent text-outline">{project.num}</div>
-              {/* project category */}
-              <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
-                {project.category} project
+              <div className="text-8xl leading-none font-extrabold text-transparent text-outline">
+                {String(current.index + 1).padStart(2, "0")}
+              </div>
+              {/* category */}
+              <p className="text-white/50 text-lg capitalize">{current.project.category}</p>
+              {/* title */}
+              <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500">
+                {current.project.title}
               </h2>
-              {/* project description */}
-              <p className="text-white/60">{project.description}</p>
+              {/* description */}
+              <p className="text-white/60">{current.project.description}</p>
               {/* stack */}
-              <ul className="flex gap-4">
-                {project.stack.map((item, index) => {
-                  return (
-                    <li key={index} className="text-xl text-accent">
-                      {item.name}
-                      {/* its to have commas between techs but not on last element */}
-                      {index !== project.stack.length - 1 && <span className="text-white/60">,</span>}
-                    </li>
-                  );
-                })}
+              <ul className="flex gap-4 flex-wrap">
+                {current.project.stack.map((item, index) => (
+                  <li key={index} className="text-xl text-accent">
+                    {item.name}
+                    {index !== current.project.stack.length - 1 && <span className="text-white/60">,</span>}
+                  </li>
+                ))}
               </ul>
               {/* border */}
               <div className="border border-white/20"></div>
               {/* buttons for links */}
               <div className="flex items-center gap-4">
                 {/* live project url */}
-                {project.live ? (
-                  <Link href={project.live}>
+                {current.project.live ? (
+                  <Link href={current.project.live}>
                     <TooltipProvider delayDuration={100}>
                       <Tooltip>
                         <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
@@ -132,7 +151,7 @@ const Work = () => {
                   </TooltipProvider>
                 )}
                 {/* github project repo */}
-                <Link href={project.github}>
+                <Link href={current.project.github}>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
