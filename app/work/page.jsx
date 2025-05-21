@@ -17,9 +17,9 @@ const projects = [
     title: "Project 1",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, quibusdam!",
     stack: [{ name: "Java" }, { name: "Spring Boot" }],
-    image: "/assets/work/thumb1.png",
-    live: "",
-    github: "https://github.com/",
+    image: "/assets/work/thumb-1.png",
+    live: "vercelli.com",
+    github: "https://github.com/Leoric01/my-landing-page",
   },
   {
     num: "02",
@@ -106,18 +106,31 @@ const Work = () => {
               {/* buttons for links */}
               <div className="flex items-center gap-4">
                 {/* live project url */}
-                <Link href={project.live}>
+                {project.live ? (
+                  <Link href={project.live}>
+                    <TooltipProvider delayDuration={100}>
+                      <Tooltip>
+                        <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
+                          <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p>Live project</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
+                  </Link>
+                ) : (
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
-                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                        <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
-                      </TooltipTrigger>
+                      <div className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center opacity-40 cursor-not-allowed">
+                        <BsArrowUpRight className="text-white text-3xl" />
+                      </div>
                       <TooltipContent>
-                        <p>Live project</p>
+                        <p>Not deployed</p>
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
-                </Link>
+                )}
                 {/* github project repo */}
                 <Link href={project.github}>
                   <TooltipProvider delayDuration={100}>
