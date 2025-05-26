@@ -2,6 +2,7 @@
 
 import React from "react";
 import CountUp from "react-countup";
+import projects from "@/app/data/projects";
 
 const stats = [
   {
@@ -9,7 +10,7 @@ const stats = [
     text: "Years of experience",
   },
   {
-    num: 2,
+    num: projects.length,
     text: "Free time projects",
   },
   {
