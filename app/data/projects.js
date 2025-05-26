@@ -17,6 +17,35 @@ const projects = [
     github: "https://github.com/Leoric01/my-landing-page",
   },
   {
+    category: "backend",
+    title: "Projects Manager / Kanban clone",
+    description:
+      "This is the backend for a usable manager of your projects and tasks. It is a REST API built with Java and Spring Boot, featuring user authentication, project management, and task tracking. The frontend is a separate project that can be found in the GitHub repository. Postman collection is included here: https://projectsmanagment-production.up.railway.app/health/postman ",
+    stack: [
+      { name: "Java" },
+      { name: "Spring Boot" },
+      { name: "MySQL" },
+      { name: "REST API" },
+      { name: "JPA / Hibernate" },
+      { name: "JWT security" },
+      { name: "Swagger" },
+      { name: "OpenApi" },
+    ],
+    thumbnail: "https://res.cloudinary.com/dz7uwudvw/image/upload/v1748284702/xe4jomhka7qjmlrk8vcu.jpg",
+    images: [
+      "https://res.cloudinary.com/dz7uwudvw/image/upload/v1748284702/xe4jomhka7qjmlrk8vcu.jpg",
+      "https://res.cloudinary.com/dz7uwudvw/image/upload/v1748284705/m7g2n2kbmrxi6rtqegkd.jpg",
+      "https://res.cloudinary.com/dz7uwudvw/image/upload/v1748284702/nvvtm1msyol2fi4nfr7h.jpg",
+      "https://res.cloudinary.com/dz7uwudvw/image/upload/v1748284704/i7ubbb0cgzlozwgorco3.jpg",
+      "https://res.cloudinary.com/dz7uwudvw/image/upload/v1748284703/kdedzbcsanehnlof6unx.jpg",
+      "https://res.cloudinary.com/dz7uwudvw/image/upload/v1748284701/ajiwerhq4krt9rb8gpr1.jpg",
+      "https://res.cloudinary.com/dz7uwudvw/image/upload/v1748284779/tdxl5luxo8f1arnevexc.jpg",
+      "https://res.cloudinary.com/dz7uwudvw/image/upload/v1748285122/px9jy8vxxshw3wkfdkip.jpg",
+    ],
+    live: "https://projectsmanagment-production.up.railway.app/swagger-ui/index.html",
+    github: "https://github.com/Leoric01/projectsmanagment",
+  },
+  {
     category: "full stack / backend and frontend",
     title: "Book Network BACKEND",
     description:
