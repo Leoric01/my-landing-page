@@ -60,7 +60,7 @@ const education = {
   items: [
     {
       institution: "Codecademy",
-      degree: "Spring Boot Basics",
+      degree: "Spring Boot Security Basics",
       duration: "2024",
     },
     {
