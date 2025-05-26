@@ -17,17 +17,6 @@ const projects = [
     github: "https://github.com/Leoric01/my-landing-page",
   },
   {
-    category: "devops",
-    title: "Project 3",
-    description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione laudantium esse harum autem temporibus labore libero vel expedita. Mollitia assumenda blanditiis delectus maiores iusto eveniet ad illum nobis laborum enim!",
-    stack: [{ name: "Java" }, { name: "Spring Boot" }, { name: "Docker" }, { name: "Kubernetes" }],
-    thumbnail: "/assets/work/thumb3.png",
-    images: [,],
-    live: "",
-    github: "https://github.com/",
-  },
-  {
     category: "full stack / backend and frontend",
     title: "Book Network BACKEND",
     description:
@@ -111,6 +100,22 @@ const projects = [
     images: [],
     live: "https://successive-veronica-urb92-5cb11d87.koyeb.app/ui",
     github: "https://github.com/Leoric01/moneta-entry-exam",
+  },
+  {
+    category: "game",
+    title: "Tic Tac Toe",
+    description:
+      "A classic Tic Tac Toe game built with Java using Swing and JPanel. This simple desktop application features a graphical interface, basic game logic, and player turn tracking. It was developed to practice GUI design, event handling, and object-oriented principles in Java.",
+    stack: [{ name: "Java" }, { name: "Swing / JPanel" }],
+    thumbnail: "https://res.cloudinary.com/dz7uwudvw/image/upload/v1748258600/ky4a96rcfmffkt3gfgy4.jpg",
+    images: [
+      "https://res.cloudinary.com/dz7uwudvw/image/upload/v1748258601/caa8hdobae76lwfxm3ub.jpg",
+      "https://res.cloudinary.com/dz7uwudvw/image/upload/v1748258601/dwxjqxh3qhoglouallal.jpg",
+      "https://res.cloudinary.com/dz7uwudvw/image/upload/v1748258600/ky4a96rcfmffkt3gfgy4.jpg",
+      "https://res.cloudinary.com/dz7uwudvw/image/upload/v1748258600/puzityppmltu7elvymem.jpg",
+    ],
+    live: "",
+    github: "https://github.com/Leoric01/TicTacToeGame",
   },
   {
     category: "game",
