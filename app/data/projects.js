@@ -53,7 +53,7 @@ const projects = [
     stack: [
       { name: "React" },
       { name: "Vite" },
-      { name: "TypeScript" },
+      { name: "JavaScript" },
       { name: "Tailwind CSS" },
       { name: "Axios" },
       { name: "React Router" },
