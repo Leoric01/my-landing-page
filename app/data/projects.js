@@ -116,7 +116,7 @@ const projects = [
   },
   {
     category: "terminal app",
-    title: "TTCExercise",
+    title: "Job Interview Console App",
     description:
       "A small command-line application written as part of a coding challenge for job interview. The app reads a sequence of numbers either from a file or from standard input. Based on the count of numbers (even or odd), it filters and prints only even or odd numbers respectively. Input/output behavior is configurable via command-line arguments. Full task is in github link in readme.",
     stack: [{ name: "Java" }, { name: "File I/O" }],
