@@ -84,7 +84,7 @@ const education = {
       duration: "2013 - 2015",
     },
     {
-      institution: "Christian Doppler Mathematical-Physical Grammar School",
+      institution: "Christian Doppler Mathematical-Physical Gymnasium",
       degree: "High School Diploma (Graduated with Matura)",
       duration: "Graduated 2012",
     },
