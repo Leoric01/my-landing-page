@@ -60,7 +60,7 @@ const projects = [
   },
   {
     category: "Backend / Fullstack",
-    title: "Bank Interview TEST",
+    title: "Moneta Interview TEST",
     description:
       "A REST API implemented in Java and Spring Boot for a bank interview task. Full task is in github link in readme. The service includes three functionalities: text transformation that reverses input text with vowel capitalization and whitespace normalization; numeric processing involving digit shifting, multiplication, deletion, and division based on specified rules; and a simple ticketing system with endpoints to generate, retrieve, and delete tickets. A quick frontend prototype was built using Thymeleaf.",
     stack: [
@@ -71,8 +71,16 @@ const projects = [
       { name: "H2 Database" },
     ],
     thumbnail: "/assets/work/moneta.png",
-    images: ["/assets/work/moneta.png"],
-    live: "https://successive-veronica-urb92-5cb11d87.koyeb.app/ui",
+    images: [
+      "/assets/work/moneta.png",
+      "https://res.cloudinary.com/dz7uwudvw/image/upload/v1748273982/w0unce6vam4g3bxy1sdn.jpg",
+      "https://res.cloudinary.com/dz7uwudvw/image/upload/v1748273983/edola7szvwplvmfdohzx.jpg",
+      "https://res.cloudinary.com/dz7uwudvw/image/upload/v1748273985/ft2vpnk1r0dvdee9atfk.jpg",
+      "https://res.cloudinary.com/dz7uwudvw/image/upload/v1748273983/tdnhxbchdevbw5ctrsmy.jpg",
+      "https://res.cloudinary.com/dz7uwudvw/image/upload/v1748273984/qzpubi2fa3sanvi0xykj.jpg",
+      "https://res.cloudinary.com/dz7uwudvw/image/upload/v1748273986/w6snyzndbncglklas8tm.jpg",
+    ],
+    live: "https://moneta-entry-exam-production.up.railway.app/ui",
     github: "https://github.com/Leoric01/moneta-entry-exam",
   },
   {
