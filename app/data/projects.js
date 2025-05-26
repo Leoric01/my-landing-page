@@ -46,6 +46,35 @@ const projects = [
     github: "https://github.com/Leoric01/projectsmanagment",
   },
   {
+    category: "frontend",
+    title: "Projects Manager / Kanban clone",
+    description:
+      "This is the frontend for a usable manager of your projects and tasks. It uses previous backend app, is built with react and vite. Since frontman is not my main, it has some issues im aware of, but it is usable. It features user authentication, project management, and task tracking. The backend is a separate project that can be found in the GitHub repository.",
+    stack: [
+      { name: "React" },
+      { name: "Vite" },
+      { name: "TypeScript" },
+      { name: "Tailwind CSS" },
+      { name: "Axios" },
+      { name: "React Router" },
+      { name: "JWT security" },
+    ],
+    thumbnail: "https://res.cloudinary.com/dz7uwudvw/image/upload/v1748292157/nznygcjrpcrk49vra3mw.jpg",
+    images: [
+      "https://res.cloudinary.com/dz7uwudvw/image/upload/v1748292158/xlsq3yygdpl00aqnj9dd.jpg",
+      "https://res.cloudinary.com/dz7uwudvw/image/upload/v1748292155/jayigjrxhq0jwetx8vu3.jpg",
+      "https://res.cloudinary.com/dz7uwudvw/image/upload/v1748292157/nznygcjrpcrk49vra3mw.jpg",
+      "https://res.cloudinary.com/dz7uwudvw/image/upload/v1748292161/qoa3wnmg2edivglamgh5.jpg",
+      "https://res.cloudinary.com/dz7uwudvw/image/upload/v1748292159/pvz7t4thsayuqzozljet.jpg",
+
+      "https://res.cloudinary.com/dz7uwudvw/image/upload/v1748292154/ucfkrlymnoydavyuhkal.jpg",
+      "https://res.cloudinary.com/dz7uwudvw/image/upload/v1748292153/kj1jd3zqi7jann8zmhzb.jpg",
+      "https://res.cloudinary.com/dz7uwudvw/image/upload/v1748292152/lpmhvetwduvtjb99rulb.jpg",
+    ],
+    live: "https://projectsmanagment-fe.vercel.app/",
+    github: "https://github.com/Leoric01/projectsmanagmentFE",
+  },
+  {
     category: "full stack / backend and frontend",
     title: "Book Network BACKEND",
     description:
