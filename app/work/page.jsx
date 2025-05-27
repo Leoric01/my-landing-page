@@ -15,12 +15,17 @@ const Work = () => {
   const [current, setCurrent] = useState({ project: projects[0], index: 0 });
   const [galleryImages, setGalleryImages] = useState(null);
   const [modalImage, setModalImage] = useState(null);
+  const swiperRef = React.useRef(null);
 
   const handleSlideChange = (swiper) => {
     const currentIndex = swiper.realIndex;
     setCurrent({ project: projects[currentIndex], index: currentIndex });
   };
-
+  const goToSlide = (index) => {
+    if (swiperRef.current && swiperRef.current.swiper) {
+      swiperRef.current.swiper.slideTo(index, 0);
+    }
+  };
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -35,9 +40,12 @@ const Work = () => {
                 const swiperIndex = current.index;
                 setGalleryImages(null);
                 setTimeout(() => {
-                  document
+                  goToSlide(swiperIndex);
+                  {
+                    /*document
                     .querySelectorAll(".swiper-slide")
-                    [swiperIndex]?.scrollIntoView({ behavior: "instant", block: "nearest" });
+                    [swiperIndex]?.scrollIntoView({ behavior: "instant", block: "nearest" });*/
+                  }
                 }, 100);
               }}
               className="mb-4 px-6 py-2 bg-accent text-[#232329] rounded-lg hover:bg-accent-hover"
@@ -130,6 +138,7 @@ const Work = () => {
             </div>
             <div className="w-full xl:w-[50%]">
               <Swiper
+                ref={swiperRef}
                 spaceBetween={30}
                 slidesPerView={1}
                 loop={true}
