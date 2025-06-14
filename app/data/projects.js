@@ -57,7 +57,7 @@ const projects = [
       { name: "Swagger" },
       { name: "OpenApi" },
     ],
-    thumbnail: "https://res.cloudinary.com/dz7uwudvw/image/upload/v1749920253/o8jm7htdfvi6nfma9ukb.jpg",
+    thumbnail: "https://res.cloudinary.com/dz7uwudvw/image/upload/v1749920253/c32b7trowsymmxl9wfcm.jpg",
     images: [
       "https://res.cloudinary.com/dz7uwudvw/image/upload/v1749920253/c32b7trowsymmxl9wfcm.jpg",
       "https://res.cloudinary.com/dz7uwudvw/image/upload/v1749920253/o8jm7htdfvi6nfma9ukb.jpg",
