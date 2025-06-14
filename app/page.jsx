@@ -68,7 +68,7 @@ export default function Home() {
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <Button asChild variant="outline" size="lg" className="uppercase flex items-center gap-2">
-                <a href="/assets/work/resume-urban-eng.pdf" download>
+                <a href="/assets/work/Urban-resume-eng-2025.pdf" download>
                   <span>Download CV</span>
                   <FiDownload className="text-xl" />
                 </a>
