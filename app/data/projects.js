@@ -40,7 +40,7 @@ const projects = [
       "https://res.cloudinary.com/dz7uwudvw/image/upload/v1749920094/uu3fbawu6ndchuhbgox8.jpg",
     ],
     live: "https://erp-storage-inventory-system-production.up.railway.app/swagger-ui/index.html#/",
-    github: "https://github.com/Leoric01/PizzaCipollaStorage",
+    github: "https://github.com/Leoric01/PizzaCipollaStorage/tree/develop",
   },
   {
     category: "frontend",
