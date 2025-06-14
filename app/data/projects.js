@@ -18,6 +18,58 @@ const projects = [
   },
   {
     category: "backend",
+    title: "Pizza/Gastro ERP system",
+    description:
+      "This is a robust ERP backend system designed for restaurants, pizzerias, and gastro businesses. Built with Java and Spring Boot, it automates inventory stock management, anticipates shortages based on ingredient usage, and supports an automatic ordering workflow. It also features OCR-based invoice processing, JWT-secured user management, and comprehensive REST APIs for full integration with frontend and POS systems. A Postman collection is available for easy API testing. The frontend is a separate project, linked in the GitHub repository. IN ACTIVE PROGRESS",
+    stack: [
+      { name: "Java" },
+      { name: "Spring Boot" },
+      { name: "MySQL" },
+      { name: "REST API" },
+      { name: "JPA / Hibernate" },
+      { name: "JWT security" },
+      { name: "Swagger" },
+      { name: "OpenApi" },
+    ],
+    thumbnail: "https://res.cloudinary.com/dz7uwudvw/image/upload/v1749920253/o8jm7htdfvi6nfma9ukb.jpg",
+    images: [
+      "https://res.cloudinary.com/dz7uwudvw/image/upload/v1749920094/tfogjkdw3vz6til3pjnf.jpg",
+      "https://res.cloudinary.com/dz7uwudvw/image/upload/v1749920094/mtm1djf4hv2nf1s23qkv.jpg",
+      "https://res.cloudinary.com/dz7uwudvw/image/upload/v1749920094/rdjtlgboldzsdbmk4kyd.jpg",
+      "https://res.cloudinary.com/dz7uwudvw/image/upload/v1749920094/kyowgwbtqpdl6yemg2jb.jpg",
+      "https://res.cloudinary.com/dz7uwudvw/image/upload/v1749920094/uu3fbawu6ndchuhbgox8.jpg",
+    ],
+    live: "https://erp-storage-inventory-system-production.up.railway.app/swagger-ui/index.html#/",
+    github: "https://github.com/Leoric01/PizzaCipollaStorage",
+  },
+  {
+    category: "frontend",
+    title: "Pizza/Gastro ERP system",
+    description:
+      "This is a robust ERP backend system designed for restaurants, pizzerias, and gastro businesses. Built with Java and Spring Boot, it automates inventory stock management, anticipates shortages based on ingredient usage, and supports an automatic ordering workflow. It also features OCR-based invoice processing, JWT-secured user management, and comprehensive REST APIs for full integration with frontend and POS systems. A Postman collection is available for easy API testing. The frontend is a separate project, linked in the GitHub repository. IN ACTIVE PROGRESS",
+    stack: [
+      { name: "Java" },
+      { name: "Spring Boot" },
+      { name: "MySQL" },
+      { name: "REST API" },
+      { name: "JPA / Hibernate" },
+      { name: "JWT security" },
+      { name: "Swagger" },
+      { name: "OpenApi" },
+    ],
+    thumbnail: "https://res.cloudinary.com/dz7uwudvw/image/upload/v1749920253/o8jm7htdfvi6nfma9ukb.jpg",
+    images: [
+      "https://res.cloudinary.com/dz7uwudvw/image/upload/v1749920253/c32b7trowsymmxl9wfcm.jpg",
+      "https://res.cloudinary.com/dz7uwudvw/image/upload/v1749920253/o8jm7htdfvi6nfma9ukb.jpg",
+      "https://res.cloudinary.com/dz7uwudvw/image/upload/v1749920920/t0ucaje8mphf1bethqkd.jpg",
+      "https://res.cloudinary.com/dz7uwudvw/image/upload/v1749920919/kobzpfkmjdtglohxhdts.jpg",
+      "https://res.cloudinary.com/dz7uwudvw/image/upload/v1749920919/cuaqch03tmsygheuihzx.jpg",
+    ],
+    live: "https://erp-storage-inventory-system-production.up.railway.app/swagger-ui/index.html#/",
+    github: "https://github.com/Leoric01/PizzaCipollaStorage",
+  },
+  {
+    category: "backend",
     title: "Projects Manager / Kanban clone",
     description:
       "This is the backend for a usable manager of your projects and tasks. It is a REST API built with Java and Spring Boot, featuring user authentication, project management, and task tracking. The frontend is a separate project that can be found in the GitHub repository. Postman collection is included here: https://projectsmanagment-production.up.railway.app/health/postman ",
