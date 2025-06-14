@@ -65,8 +65,8 @@ const projects = [
       "https://res.cloudinary.com/dz7uwudvw/image/upload/v1749920919/kobzpfkmjdtglohxhdts.jpg",
       "https://res.cloudinary.com/dz7uwudvw/image/upload/v1749920919/cuaqch03tmsygheuihzx.jpg",
     ],
-    live: "https://erp-storage-inventory-system-production.up.railway.app/swagger-ui/index.html#/",
-    github: "https://github.com/Leoric01/PizzaCipollaStorage",
+    live: "https://zradlo-fe.vercel.app/",
+    github: "https://github.com/Leoric01/PizzaCipollaStorage-FE",
   },
   {
     category: "backend",
