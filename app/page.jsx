@@ -55,8 +55,10 @@ export default function Home() {
               Hello, I'm <br /> <span className="text-accent">Jiří Urban</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-              I excel at backend using java as my main, but i have also some basics in frontend with react, typescript,
-              even created one project using angular but design is my weakpoint. <br />
+              My main focus is on backend using Java as my main, preffer SpringBoot as a framework. I also have basic
+              experience with frontend technologies such as React, TypeScript, and have completed a project using
+              Angular. While design isn't my strongest area, I have a strong work ethic, continuously seek to learn new
+              technologies, and prioritize self-improvement in my development journey. <br />
               Other techstack experience: springboot, maven, gradle, git, sql, jira, confluence, swagger, hibernate,
               junit, ELK, jenkins.
             </p>
@@ -68,7 +70,7 @@ export default function Home() {
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <Button asChild variant="outline" size="lg" className="uppercase flex items-center gap-2">
-                <a href="https://drive.google.com/file/d/1LAtO4MBTtSVBnZmKiUM77BMAHPFAChI8/view?usp=sharing" download>
+                <a href="https://drive.google.com/file/d/1XIxo2A8oFvQXNOpZF2uBwBza2rXmekzD/view?usp=sharing" download>
                   <span>Download CV</span>
                   <FiDownload className="text-xl" />
                 </a>
