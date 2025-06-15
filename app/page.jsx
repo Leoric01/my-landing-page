@@ -57,7 +57,7 @@ export default function Home() {
             <p className="max-w-[500px] mb-9 text-white/80">
               My main focus is on backend using Java as my main, preffer SpringBoot as a framework. I also have basic
               experience with frontend technologies such as React, TypeScript, and have completed a project using
-              Angular. While design isn't my strongest area, I have a strong work ethic, continuously seek to learn new
+              Angular, but design is my weakpoint. I have strong work ethic, continuously seek to learn new
               technologies, and prioritize self-improvement in my development journey. <br />
               Other techstack experience: springboot, maven, gradle, git, sql, jira, confluence, swagger, hibernate,
               junit, ELK, jenkins.
